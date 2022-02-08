@@ -1,0 +1,51 @@
+id: draw_dr_box
+label: Block
+flags: [ python ]
+category: '[Draw]'
+
+parameters:
+-   id: dr_name
+    label: Type
+    dtype: string
+    default: "Block"
+-   id: numIn
+    label: Number of Inputs
+    dtype: int
+    default: 1
+    hide: part
+-   id: hideIn
+    label: Hide Inputs
+    dtype: bool
+    default: false
+    hide: part
+-   id: numOut
+    label: Number of Outputs
+    dtype: int
+    default: 1
+    hide: part
+-   id: hideOut
+    label: Hide Outputs
+    dtype: bool
+    default: false
+    hide: part
+
+inputs:
+-   domain: message
+    id: input
+    multiplicity: ${ numIn }
+    optional: true
+    hide: ${ hideIn }
+
+outputs:
+-   domain: message
+    id: output
+    multiplicity: ${ numOut }
+    optional: true
+    hide: ${ hideOut }
+
+templates:
+  imports: from gnuradio import draw
+  make: draw.dr_box()
+
+file_format: 1
+
