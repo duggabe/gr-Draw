@@ -13,20 +13,10 @@ parameters:
     dtype: int
     default: 1
     hide: part
--   id: hideIn
-    label: Hide Inputs
-    dtype: bool
-    default: false
-    hide: part
 -   id: numOut
     label: Number of Outputs
     dtype: int
     default: 1
-    hide: part
--   id: hideOut
-    label: Hide Outputs
-    dtype: bool
-    default: false
     hide: part
 
 inputs:
@@ -34,14 +24,14 @@ inputs:
     id: input
     multiplicity: ${ numIn }
     optional: true
-    hide: ${ hideIn }
+    hide: ${ numIn < 1 }
 
 outputs:
 -   domain: message
     id: output
     multiplicity: ${ numOut }
     optional: true
-    hide: ${ hideOut }
+    hide: ${ numOut < 1 }
 
 templates:
   imports: from gnuradio import draw
