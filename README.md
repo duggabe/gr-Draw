@@ -1,7 +1,7 @@
 # gr-Draw
-This module utilizes the drawing capabilities of GNU Radio's gnuradio-companion to create generic blocks and connect them into a diagram. The resultant diagram does not do anything. It is strictly for the visual diagram itself.
+This module utilizes the drawing capabilities of GNU Radio's gnuradio-companion to create generic blocks and connect them into a diagram. **The resultant diagram does not do anything.** It is strictly for the visual diagram itself.
 
-This is a work in progress.
+Updated for GNU Radio 3.10
 
 ## Installation
 
@@ -42,7 +42,7 @@ gnuradio-companion
 
 The drawing block will be in the Block Tree panel under Draw. Each Block can have any number of inputs and outputs selected in Parameters.
 
-Here is a sample screen shot:
+Here is a sample diagram used to design the A/V for GRCon22:
 
 <img src="./A_V_diagram_22.png" width="562" height="262">
 
